@@ -34,7 +34,6 @@ export class ProductoRegisterComponent implements OnInit {
     private _productoService: ProductoService
   ) {
     this.myForm = this.fb.group({
-      
       idProducto: [null, [Validators.required]],
       idCategoria: [null, [Validators.required]],
       idProveedor: [null, [Validators.required]],
@@ -47,6 +46,7 @@ export class ProductoRegisterComponent implements OnInit {
       fechaIngreso: [null, [Validators.required]],
       fechaVencimiento: [null, [Validators.required]],
       descripcion:[null, [Validators.required]],
+      // url_Img:[null, [Validators.required]],
     });
   }
 
@@ -81,7 +81,7 @@ export class ProductoRegisterComponent implements OnInit {
   {
     /*FIXME: SI POR A O B, TENEMOS UN CAMPO DES-HABILITADO DESDE ANGULAR / NO TRAE ESE VALOR */
     //this.estado = this.myForm.value();
-   
+
     this.producto = this.myForm.getRawValue();
     if(this.producto.idProducto == 0)
     {

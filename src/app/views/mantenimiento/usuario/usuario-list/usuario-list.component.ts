@@ -72,7 +72,7 @@ export class UsuarioListComponent implements OnInit {
   {
 
     let res= Swal.fire({
-      title: '¿Está seguro de eliminar el registro?',
+      title: '¿Está seguro de eliminar este usuario?',
       text: "¡No podrás revertir esto!",
       icon: 'warning',
       showCancelButton: true,
@@ -85,8 +85,8 @@ export class UsuarioListComponent implements OnInit {
            (data:number)=>{
             console.log(data);
         Swal.fire(
-          'Eliminado!',
-          'registro eliminado de forma satisfactoría.',
+          'Usuario Eliminado!',
+          'Se a eliminado el usuario de forma satisfactoría.',
           'success'
         )
         this.getAllUsuario();
